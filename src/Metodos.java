@@ -164,7 +164,8 @@ public class Metodos {
         }
     }
     //parte3
-    public static void grabarCadeaTresVeces( String ruta, String fileName,String cadea) {
+    private static final String cadea = "o tempo está xélido";
+    public static void grabarCadeaTresVeces( String ruta, String fileName) {
 
         File fichero = new File(ruta, fileName);
         if (fichero.exists()){
@@ -178,8 +179,8 @@ public class Metodos {
 
                 System.out.println("tamano final do ficheiro: " + dos.size() + " bytes");
 
-            } catch (IOException e) {
-                System.out.println("Erro ao escribir no ficheiro: " + e.getMessage());
+            } catch (IOException Error) {
+                System.out.println("Erro ao escribir no ficheiro: " + Error.getMessage());
             }
         } else{
             System.out.println("O ficheiro " + fileName + " non existe na ruta: " + ruta);
@@ -203,8 +204,8 @@ public class Metodos {
 
             System.out.println("Xa non queda nada por ler");
 
-        } catch (IOException e) {
-            System.out.println("Erro ao ler do ficheiro: " + e.getMessage());
+        } catch (IOException Error) {
+            System.out.println("Erro ao ler do ficheiro: " + Error.getMessage());
         }
     }
 
